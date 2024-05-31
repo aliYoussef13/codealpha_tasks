@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #f0e6d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+.notebook {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    perspective: 1500px;
+}
+
+.cover, .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:visible;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.cover {
+    background: #2e95aa;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left;
+    transition: transform 1.5s;
+    transform: rotateY(0deg);
+    z-index: 960;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.cover h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+}
+
+.cover button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.cover button:hover {
+    background-color: #1e7082;
+    color: white;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+    transform-origin: left;
+    transition: transform 1s;
+    transform: rotateY(0deg);
+    z-index: 2;
+    width: 340px;
+    height: 440px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.container.open {
+    transform: rotateY(0deg);
+    display: block;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    margin-top: -0px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: -400px;
+    width: 100px;
+    height: 20px;
+    margin-left:35px ;
+
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none ;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 15px;
+}
+
+button:hover {
+    transform: scale(1.09);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+li {
+    background: transparent;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Shadows Into Light', cursive;
+    margin-left: 35px;
+    font-size: 15px;
+    height: 18px;
+    overflow: hidden;
+    margin-top: 3px;
+    border: none;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #999;
+}
+
+button.delete {
+    background-color: transparent;
+
+    margin-left: 10px;
+    color: red;
+    font-size: 15px;
+
+}
+
+button.delete:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.close-button {
+    margin-top: 350px;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 16px;
+    position: absolute;
+    margin-left: 250px ;
+
+}
+
+
+
+.side{
+    background-color: transparent;
+    width: 60px;
+    height: 500px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    border-right: #e63946 solid 2px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+
+.cover2 {
+
+    width: 100%;
+    height: 200px;
+    top: 50;
+background-color:#e8e8e0 ;
+position: absolute;
+
+
+
+}
+
+.cover3 {
+
+    width: 100%;
+    height: 40px;
+    background-color:#cddc39 ;
+margin-top: 40%;    z-index: 999;
+
+}
+
+
+.cover4 {
+
+    height: 101.5%;
+    width: 25px;
+    background-color:#1e7082 ;
+    position: absolute;
+    z-index: 999;
+    margin-left: 200px;
+    border-radius: 4px;
+    display: flex;
+
+
+}
+
+.cover5 {
+    height: 99.7%;
+    width: 5px;
+    box-shadow: 0px 2px 2px 1px #333;
+    margin-left: 5px;
+    border: none;
+    border-right: 0px solid #1e7082;
+
+}
